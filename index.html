@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario de Registro</title>
+</head>
+
+<body class="registration-page">
+  <main class="registration-card">
+    <h1>Formulario de Registro</h1>
+    <h2>Complete los datos de todos los campos, para ser registrado correctamente.</h2>
+
+    <form id="registroForm" novalidate>
+      <div class="form-grid">
+        <label for="nombre">
+          <span>Nombre:</span>
+          <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" autocomplete="given-name" required>
+        </label>
+
+        <label for="apellido">
+          <span>Apellido:</span>
+          <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" autocomplete="family-name" required>
+        </label>
+
+        <label for="edad">
+          <span>Edad:</span>
+          <input type="number" name="edad" id="edad" placeholder="Ingrese su edad" min="1" max="120" step="1" required>
+        </label>
+
+        <label for="fechaNacimiento">
+          <span>Fecha de nacimiento:</span>
+          <input type="date" name="fechaNacimiento" id="fechaNacimiento" autocomplete="bday" required>
+        </label>
+
+        <label for="genero">
+          <span>Género:</span>
+          <select name="genero" id="genero" required>
+            <option value="" selected disabled>Seleccione una opción</option>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+            <option value="no-binario">No binario</option>
+            <option value="otro">Otro</option>
+            <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+          </select>
+        </label>
+
+        <label for="estadoCivil">
+          <span>Estado civil:</span>
+          <select name="estadoCivil" id="estadoCivil" required>
+            <option value="" selected disabled>Seleccione una opción</option>
+            <option value="soltero">Soltero/a</option>
+            <option value="casado">Casado/a</option>
+            <option value="divorciado">Divorciado/a</option>
+            <option value="viudo">Viudo/a</option>
+            <option value="union-convivencial">Unión convivencial</option>
+          </select>
+        </label>
+
+        <label for="domicilio">
+          <span>Domicilio:</span>
+          <input type="text" name="domicilio" id="domicilio" placeholder="Ingrese su domicilio" autocomplete="street-address" required>
+        </label>
+
+        <label for="localidad">
+          <span>Localidad:</span>
+          <input type="text" name="localidad" id="localidad" placeholder="Ingrese su localidad" autocomplete="address-level2" required>
+        </label>
+
+        <label for="email" class="form-field-wide">
+          <span>Correo electrónico:</span>
+          <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" autocomplete="email" required>
+        </label>
+
+        <label for="password">
+          <span>Contraseña:</span>
+          <input type="password" name="password" id="password" placeholder="Contraseña" minlength="6" autocomplete="new-password" required>
+        </label>
+
+        <label for="confirmacion">
+          <span>Confirmación de contraseña:</span>
+          <input type="password" name="confirmacion" id="confirmacion" placeholder="Confirme su contraseña" minlength="6" autocomplete="new-password" required>
+        </label>
+      </div>
+
+      <button type="submit">Regístrese</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
