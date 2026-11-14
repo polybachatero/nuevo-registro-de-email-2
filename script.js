@@ -86,10 +86,15 @@ const registrarUsuario = (event) => {
 
 const mostrarBienvenida = () => {
   const emailRegistrado = localStorage.getItem("emailRegistrado");
-  const mensaje = document.querySelector(".mensaje-bienvenida");
+  const mensaje = document.getElementById("mensaje-bienvenida");
 
   if (mensaje) {
-    const nombreUsuario = emailRegistrado ? emailRegistrado.split("@")[0] : "usuario";
+    let nombreUsuario = "usuario";
+
+    if (emailRegistrado) {
+      nombreUsuario = emailRegistrado.split("@")[0];
+    }
+
     mensaje.textContent = `¡Bienvenid@, ${nombreUsuario}!`;
   }
 };
@@ -100,16 +105,9 @@ const salir = () => {
   window.location.href = "index.html";
 };
 
-if (formulario) {
-  formulario.addEventListener("submit", registrarUsuario);
-}
+window.registrarUsuario = registrarUsuario;
+window.salir = salir;
 
 if (document.body.classList.contains("pagina-bienvenida")) {
   mostrarBienvenida();
-
-  const botonSalir = document.getElementById("boton-salir");
-
-  if (botonSalir) {
-    botonSalir.addEventListener("click", salir);
-  }
 }
