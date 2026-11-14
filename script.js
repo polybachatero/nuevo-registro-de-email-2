@@ -1,10 +1,10 @@
-const formulario = document.getElementById("registroForm");
+const formulario = document.getElementById("formulario-registro");
 const nombreInput = document.getElementById("nombre");
 const apellidoInput = document.getElementById("apellido");
 const edadInput = document.getElementById("edad");
-const fechaNacimientoInput = document.getElementById("fechaNacimiento");
+const fechaNacimientoInput = document.getElementById("fecha-nacimiento");
 const generoInput = document.getElementById("genero");
-const estadoCivilInput = document.getElementById("estadoCivil");
+const estadoCivilInput = document.getElementById("estado-civil");
 const domicilioInput = document.getElementById("domicilio");
 const localidadInput = document.getElementById("localidad");
 const emailInput = document.getElementById("email");
@@ -81,12 +81,12 @@ const registrarUsuario = (event) => {
 
   localStorage.setItem("registroUsuario", JSON.stringify(registro));
   localStorage.setItem("emailRegistrado", email);
-  window.location.href = "bienvenid@.html";
+  window.location.href = "bienvenida.html";
 };
 
 const mostrarBienvenida = () => {
   const emailRegistrado = localStorage.getItem("emailRegistrado");
-  const mensaje = document.querySelector(".welcome-message");
+  const mensaje = document.querySelector(".mensaje-bienvenida");
 
   if (mensaje) {
     const nombreUsuario = emailRegistrado ? emailRegistrado.split("@")[0] : "usuario";
@@ -104,6 +104,12 @@ if (formulario) {
   formulario.addEventListener("submit", registrarUsuario);
 }
 
-if (document.body.classList.contains("welcome-page")) {
+if (document.body.classList.contains("pagina-bienvenida")) {
   mostrarBienvenida();
+
+  const botonSalir = document.getElementById("boton-salir");
+
+  if (botonSalir) {
+    botonSalir.addEventListener("click", salir);
+  }
 }

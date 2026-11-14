@@ -8,13 +8,13 @@
   <title>Formulario de Registro</title>
 </head>
 
-<body class="registration-page">
-  <main class="registration-card">
+<body class="pagina-registro">
+  <main class="tarjeta-registro">
     <h1>Formulario de Registro</h1>
-    <h2>Complete los datos de todos los campos, para ser registrado correctamente.</h2>
+    <p class="texto-ayuda">Complete los datos de todos los campos, para ser registrado correctamente.</p>
 
-    <form id="registroForm" novalidate>
-      <div class="form-grid">
+    <form id="formulario-registro" novalidate>
+      <div class="rejilla-formulario">
         <label for="nombre">
           <span>Nombre:</span>
           <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" autocomplete="given-name" required>
@@ -30,9 +30,9 @@
           <input type="number" name="edad" id="edad" placeholder="Ingrese su edad" min="1" max="120" step="1" required>
         </label>
 
-        <label for="fechaNacimiento">
+        <label for="fecha-nacimiento">
           <span>Fecha de nacimiento:</span>
-          <input type="date" name="fechaNacimiento" id="fechaNacimiento" autocomplete="bday" required>
+          <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" autocomplete="bday" required>
         </label>
 
         <label for="genero">
@@ -47,9 +47,9 @@
           </select>
         </label>
 
-        <label for="estadoCivil">
+        <label for="estado-civil">
           <span>Estado civil:</span>
-          <select name="estadoCivil" id="estadoCivil" required>
+          <select name="estado-civil" id="estado-civil" required>
             <option value="" selected disabled>Seleccione una opción</option>
             <option value="soltero">Soltero/a</option>
             <option value="casado">Casado/a</option>
@@ -69,7 +69,7 @@
           <input type="text" name="localidad" id="localidad" placeholder="Ingrese su localidad" autocomplete="address-level2" required>
         </label>
 
-        <label for="email" class="form-field-wide">
+        <label for="email" class="campo-ancho">
           <span>Correo electrónico:</span>
           <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" autocomplete="email" required>
         </label>
@@ -85,7 +85,7 @@
         </label>
       </div>
 
-      <button type="submit">Regístrese</button>
+      <button type="submit" class="btn-primario">Regístrese</button>
     </form>
   </main>
 

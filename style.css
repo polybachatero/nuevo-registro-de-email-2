@@ -15,8 +15,8 @@ body {
   color: #ffffff;
 }
 
-.registration-page,
-.welcome-page {
+.pagina-registro,
+.pagina-bienvenida {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -36,7 +36,7 @@ main {
   backdrop-filter: blur(4px);
 }
 
-.registration-card {
+.tarjeta-registro {
   width: min(100%, 800px);
   background: transparent;
   border: none;
@@ -44,15 +44,15 @@ main {
   backdrop-filter: none;
 }
 
-.registration-card,
-.welcome-card {
+.tarjeta-registro,
+.tarjeta-bienvenida {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 h1,
-h2 {
+.texto-ayuda {
   text-align: center;
   color: #ffffff;
 }
@@ -62,7 +62,7 @@ h1 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-h2 {
+.texto-ayuda {
   margin-bottom: 28px;
   font-size: 1.1rem;
 }
@@ -73,13 +73,13 @@ form {
   gap: 20px;
 }
 
-.form-grid {
+.rejilla-formulario {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-.form-field-wide {
+.campo-ancho {
   grid-column: 1 / -1;
 }
 
@@ -97,20 +97,11 @@ label span {
 
 input,
 select,
-button {
+.btn-primario {
   font: inherit;
 }
 
-input {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid rgba(214, 226, 255, 0.6);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  outline: none;
-}
-
+input,
 select {
   width: 100%;
   padding: 12px 14px;
@@ -136,7 +127,7 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(156, 196, 255, 0.28);
 }
 
-button {
+.btn-primario {
   width: min(100%, 260px);
   align-self: center;
   padding: 12px 16px;
@@ -149,24 +140,24 @@ button {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-button:hover {
+.btn-primario:hover {
   background: linear-gradient(135deg, #1548b5, #2a7bff);
   transform: translateY(-1px);
 }
 
-.welcome-card {
+.tarjeta-bienvenida {
   min-height: 420px;
   gap: 20px;
   align-items: center;
   text-align: center;
 }
 
-.welcome-message {
+.mensaje-bienvenida {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 0;
 }
 
-.welcome-subtitle {
+.subtitulo-bienvenida {
   font-size: 1.05rem;
   color: #d7e6ff;
 }
@@ -182,11 +173,11 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  .form-grid {
+  .rejilla-formulario {
     grid-template-columns: 1fr;
   }
 
-  .form-field-wide {
+  .campo-ancho {
     grid-column: auto;
   }
 }

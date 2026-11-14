@@ -1,0 +1,15 @@
+*Segundo prompt - AGENT. md - GUÍA*:
+- Este es un proyecto centrado en javascript.
+- utiliza siempre estilos css, no librerias ni frameworks
+- utiliza una estructura simple en html de header, main y footer.
+- Hay que subdividir el proyecto en 4 archivos: index.html, bienvenida.html, style.css y [script.js](http://script.js)
+- cuando trabaje en el script, utilice arrow function (función flecha), no utilice la función clásica
+- los condicionales deben ser sólo con if, a menos que sea necesario un else.
+- usa programación declarativa
+- el fetch debe ser simple (fetch, guardar la data en una constante y convertirla a JSON)
+- utiliza métodos con la estructura de arrow function
+- para traer los datos de html, utiliza getElementById, no querySelector
+- los mensajes de consola tienen que estar diferenciados entre .log para mensajes genericos, .warn para advertencias y .error para errores
+- para la persistencia de datos utiliza localStorage, no sessionStorage
+- para las redirecciones desde js/script utiliza window.location.href
+- en html, para llamar la función, si es un formulario, utilizar el atributo onSubmit, pero si la función debe llamarse en un elemento solo, utiiza onclick.
